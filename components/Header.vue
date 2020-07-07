@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .nuxt-link-exact-active {
   color: blue;
   font-weight: bold;
