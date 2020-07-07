@@ -1,0 +1,18 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "D:\\\\Github\\\\mjc-nuxt-starter\\\\pages\\\\about.vue",
+    "chunkName": "pages/about",
+    "url": "/about",
+    "_name": "_921ae6c8"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\Github\\\\mjc-nuxt-starter\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "url": "/",
+    "_name": "_52ab313e"
+  }
+]
