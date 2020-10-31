@@ -21,14 +21,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .loading {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(white, 0.9);
+  background: rgba(#fff, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@ export default {
   height: 50px;
   border-radius: 50%;
   border: 1px solid transparent;
-  border-top-color: blue;
+  border-top-color: red;
   animation: spin 1.7s linear infinite;
 
   &:before {
@@ -66,7 +66,7 @@ export default {
     bottom: 10px;
     border-radius: 50%;
     border: 1px solid transparent;
-    border-top-color: blue;
+    border-top-color: red;
     animation: spin 1s linear infinite;
   }
 }

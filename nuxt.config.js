@@ -1,10 +1,8 @@
 import config from './data/siteConfig'
 
 export default {
-  mode: 'universal',
-  components: true,
   // ------------------------------------
-  // HEADERS OF THE PAGE
+  // SEO & HEADERS
   // ------------------------------------
   head: {
     title: config.siteTitle,
@@ -76,11 +74,24 @@ export default {
     ],
   },
   // ------------------------------------
+  // SET TARGET
+  // ------------------------------------
+  target: 'static',
+  // ------------------------------------
   // CUSTOM LOADER
   // ------------------------------------
-  loading: '~/components/Loading.vue',
+  loading: '~/components/Loading/Loading.vue',
   // ------------------------------------
-  // PLUGINS TO LOAD BEFORE MOUNTING THE APP
+  // LOAD COMPONENTS AUTOMATICALLY
+  // ------------------------------------
+  components: true,
+  // ------------------------------------
+  // CSS
+  // ------------------------------------
+  css: ['@/assets/styles/main.scss'],
+  extractCSS: true,
+  // ------------------------------------
+  // PLUGINS
   // ------------------------------------
   plugins: [],
   // ------------------------------------
@@ -89,13 +100,16 @@ export default {
   buildModules: [
     '@nuxt/components',
     '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/stylelint-module',
     '@nuxtjs/google-analytics',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
   ],
   // ------------------------------------
   // NUXT.JS MODULES
   // ------------------------------------
   modules: [
+    '@nuxtjs/style-resources',
     '@nuxtjs/sitemap',
     '@nuxtjs/browserconfig',
     'nuxt-fontawesome',
@@ -105,7 +119,7 @@ export default {
     '@nuxtjs/pwa',
   ],
   // ------------------------------------
-  // PWA OPTIONS
+  // PROGRESSIVE WEB APP
   // ------------------------------------
   pwa: {
     manifest: {
@@ -117,16 +131,14 @@ export default {
     },
   },
   // ------------------------------------
-  // FONTAWESOME OPTIONS
+  // FONTAWESOME
   // ------------------------------------
   fontawesome: {
     imports: [
-      // SOLID
       {
         set: '@fortawesome/free-solid-svg-icons',
         icons: ['fas'],
       },
-      // BRANDS
       {
         set: '@fortawesome/free-brands-svg-icons',
         icons: ['fab'],
@@ -134,7 +146,7 @@ export default {
     ],
   },
   // ------------------------------------
-  // CUSTOM WEBFONT OPTIONS
+  // WEBFONTS
   // ------------------------------------
   webfontloader: {
     custom: {
@@ -147,13 +159,19 @@ export default {
     },
   },
   // ------------------------------------
-  // BROWSERCONFIG OPTIONS
+  // GLOBAL SCSS VARIABLE/MIXINS IMPORTS
+  // ------------------------------------
+  styleResources: {
+    scss: ['~/assets/styles/_variables.scss'],
+  },
+  // ------------------------------------
+  // BROWSERCONFIG
   // ------------------------------------
   browserconfig: {
     TileColor: config.themeColor,
   },
   // ------------------------------------
-  // SITEMAP OPTIONS
+  // SITEMAP
   // ------------------------------------
   sitemap: {
     hostname: config.siteUrl,
@@ -164,10 +182,4 @@ export default {
   googleAnalytics: {
     id: config.googleAnalyticsID,
   },
-  // ------------------------------------
-  // BUILD CONFIGURATION
-  // ------------------------------------
-  // build: {
-  //   extend(config, ctx) {},
-  // },
 }

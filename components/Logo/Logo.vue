@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 img {
   width: 100px;
 }

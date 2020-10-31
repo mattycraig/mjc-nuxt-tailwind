@@ -1,0 +1,11 @@
+// VARIABLES + OVERRIDES
+// ------------------------------------
+@import 'variables';
+
+// CUSTOM GLOBAL STYLES
+// ------------------------------------
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

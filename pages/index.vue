@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <div class="intro">
-      <Logo />
-      <h1 class="title">Homepage</h1>
-      <h2 class="subtitle">This is the homepage.</h2>
-      <div class="links">
-        <nuxt-link class="btn btn-primary mx-1" to="/">Home</nuxt-link>
-        <nuxt-link class="btn btn-secondary mx-1" to="/about">About</nuxt-link>
-      </div>
+  <div class="intro">
+    <Logo />
+    <h1 class="title">Homepage</h1>
+    <h2 class="subtitle">This is the homepage.</h2>
+    <div class="links">
+      <nuxt-link class="btn btn-primary mx-1" to="/">Home</nuxt-link>
+      <nuxt-link class="btn btn-secondary mx-1" to="/about">About</nuxt-link>
     </div>
   </div>
 </template>
@@ -41,7 +39,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .intro {
   display: flex;
   flex-direction: column;

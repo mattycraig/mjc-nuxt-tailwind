@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div class="layout layout--default">
     <Header></Header>
-    <main id="content" class="flex-grow">
+    <main id="content">
       <div class="container mx-auto">
         <nuxt></nuxt>
       </div>
@@ -9,3 +9,15 @@
     <Footer></Footer>
   </div>
 </template>
+
+<style lang="scss">
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#content {
+  flex: 1 0 auto;
+}
+</style>
