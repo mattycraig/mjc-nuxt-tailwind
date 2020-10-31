@@ -1,13 +1,13 @@
 <template>
   <header>
-    <div class="container mx-auto">
+    <div class="container mx-auto flex items-center py-4">
       <span>{{ siteName }}</span>
       <div class="ml-auto">
         <nuxt-link class="btn btn-sm btn-link mx-1" to="/">Home</nuxt-link>
         <nuxt-link class="btn btn-sm btn-link mx-1" to="/about"
           >About</nuxt-link
         >
-        <Theme class="d-inline-block"></Theme>
+        <Theme class="inline-block"></Theme>
       </div>
     </div>
   </header>
@@ -25,15 +25,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-header {
-  display: flex;
-  align-items: center;
-  padding: 1rem 0;
-}
-
+<style lang="scss">
 .nuxt-link-exact-active {
-  color: red;
-  font-weight: bold;
+  @apply text-primary-400;
+  @apply font-bold;
 }
 </style>

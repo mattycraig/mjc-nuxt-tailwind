@@ -1,13 +1,13 @@
 <template>
-  <footer>
-    <div class="container mx-auto">
+  <footer class="bg-primary-500">
+    <div class="container mx-auto flex items-center py-4 text-white">
       <span>&copy; {{ new Date().getFullYear() }} {{ siteName }}</span
       ><span class="ml-auto"
-        ><a href="#"
-          ><font-awesome-icon
+        ><a href="#">
+          <font-awesome-icon
             class="mx-1"
             :icon="['fab', 'facebook']"
-          ></font-awesome-icon></a
+          ></font-awesome-icon> </a
         ><a href="#"
           ><font-awesome-icon
             class="mx-1"
@@ -34,15 +34,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-footer {
-  background: #444;
-  color: #fff;
-  display: flex;
-  position: relative;
-  z-index: 2;
-  flex-shrink: 0;
-  padding: 1rem 0;
-}
-</style>
