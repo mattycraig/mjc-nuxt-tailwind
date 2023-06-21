@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.2.2",
-    "nuxt": "^2.14.7"
+    "nuxt": "^3.4.3"
   },
   "devDependencies": {
     "@babel/runtime-corejs3": "^7.12.1",
